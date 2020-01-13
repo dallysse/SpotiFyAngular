@@ -1,0 +1,43 @@
+ Recuper un token
+ 1. Avoir un compte spotify
+ 2. Creer une app a ce lien "https://developer.spotify.com/dashboard/applications" afin de
+    recuperer votre Client_id, client secret et Redirect URIs
+
+    Vous pouvez utiliser Redirect URIs= http://localhost:8888/callback/
+    il faut le add en cliquant sur edit setting une fois dans lapp que vous avez creer
+
+  3. Recuperer le token
+  a ce lien "https://developer.spotify.com/documentation/web-api/quick-start/ "
+  telecharger le dossier https://github.com/spotify/web-api-auth-examples
+  faite un
+  $ npm install
+  ensuite dans le dossier cd authorization_code
+  ajouter votre Client_id, client secret et Redirect URIs
+ et faites un
+ $ node app.js assurez vous detre dans le dossier authorization_code
+
+ 4. vous serez diriger vers http://localhost:8888/
+ il vous sera proposer de login a votre compte Spotify et une fois fait vous recuperer l access token dans url
+Exemple:
+http://localhost:8888/#access_token=BQA_z6606lUMpcf0IoHWW8J0ofKa8kHQ8QFjtIG6lRtwy-ysSu1bt14OLFoKxgltsNsKc08AcnK7xsSVOhAKO24BwGbNhaAbyqss51Xh304ix7WTerSIgCTOGvUFOhEJkaK0S2rc4QTTkq8n9eiTjeRB5HZuLDP86zQQ&refresh_token=AQAIcqeDDBBDPdAHis34eTUjluYGIJVj2pGYQJLSQ8xI43
+VptgqoM12wbHF-Zl2yN-KYqozGHydOuKv3H-N-vx9c1JhiEullqZOBhl0abxaLW2UV21JQrD_1oHDK_rbBUEA
+
+ 5. Remplacer le token de la ligne 17 apres le Bearer par le votre
+
+
+ 6. Liste des fonctionnalités
+   - á l'accueil  une liste d'artistes
+   - une fois quon click sur un artiste on les top musiques de cet artiste
+   -  un formulaire search nous permet de trouver un artist
+   - un formulaire de contact
+
+Liste des entités
+  - Artist
+  - tracks
+
+Diagramme entité-association (ou équivalent pour représenter les relations entre entités)
+  - on a besoin de id de lartist pour ses musiques
+
+Arborescence des pages
+ - Artist a musique
+
